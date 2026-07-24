@@ -1,0 +1,16 @@
+#include <16F877A.h>           // Ch?n dòng PIC b?n dang dùng
+#device ADC=10
+#use delay(clock=20000000)
+
+#use rs232(baud=115200, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits=8)
+
+void main()
+{
+   unsigned int16 count = 0;   
+   while(TRUE)
+   {
+      printf("Gia tri bien: %Lu \r\n", count); /
+      count++;                                
+      delay_ms(1000);                           
+   }
+}

@@ -1,0 +1,20 @@
+#include <16F877A.h>
+#use delay(clock=20000000) // Thạch anh 20MHz
+
+void main() {
+    unsigned int16 i = 0;
+
+    // Cài đặt Timer2 tạo tần số PWM
+    setup_timer2(T2_DIV_BY_16, 255, 1); 
+    
+    // Cài đặt chân CCP1 (RC2) chạy chế độ PWM
+    setup_ccp1(CCP_PWM); 
+
+    while(TRUE) {
+        // Vòng lặp tăng độ sáng dần
+        for(i = 0; i <= 1023; i += 10) {
+            set_pwm1_duty(i); // Thay đổi độ rộng xung
+            delay_ms(15);     // Tốc độ tăng sáng
+        }
+    }
+}

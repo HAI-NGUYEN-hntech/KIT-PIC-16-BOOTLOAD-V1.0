@@ -1,5 +1,5 @@
 BOARD MẠCH KIT PIC16BOOTLOAD ĐƯỢC XÂY DỰNG TỪ PIC 16F877A NẠP CODE TRỰC TIẾP QUA PHẦN MỀM TINY BOOTLOADDER ĐƯỢC PHÁT TRIỂN BỞI HNTECH
-(hntech.com.vn)
+https://hntech.com.vn/
 
 Phần mềm code: picc ccs, xc8
 
